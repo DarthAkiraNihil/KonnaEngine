@@ -13,6 +13,7 @@ public class KRenderUnitList {
     private ArrayList<BufferedImage> renderUnitList;
 
     public KRenderUnitList(String pathToTable, KSize tableUnitSize) throws KGraphicException{
+        this.renderUnitList = new ArrayList<>();
         try {
             if (pathToTable == null) {
                 throw new KGraphicException("Error while creating render unit list: blank path passed, use another constructor");
@@ -21,7 +22,7 @@ public class KRenderUnitList {
                 for (int i = 0; i < 16; i++) {
                     for (int j = 0; j < 16; j++) {
                         this.renderUnitList.add(
-                            table.getSubimage(16*j + 1, 16*i + 1, tableUnitSize.w, tableUnitSize.h)
+                            table.getSubimage(16*j, 16*i, tableUnitSize.w, tableUnitSize.h)
                         );
                     }
                 }
@@ -41,9 +42,9 @@ public class KRenderUnitList {
         BufferedImage temp = this.renderUnitList.get(unitID);
         for (int i = 0; i < temp.getHeight(); i++) {
             for (int j = 0; j < temp.getWidth(); j++) {
-                KColor unitPixelColor = new KColor(temp.getRGB(j + 1, i + 1));
+                KColor unitPixelColor = new KColor(temp.getRGB(j, i));
                 unitPixelColor.multiply(color);
-                temp.setRGB(j + 1, i + 1, unitPixelColor.getConvertedToInt());
+                temp.setRGB(j, i, unitPixelColor.getConvertedToInt());
             }
         }
         return temp;

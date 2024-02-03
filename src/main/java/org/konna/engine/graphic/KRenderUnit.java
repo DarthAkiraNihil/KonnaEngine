@@ -7,4 +7,9 @@ public class KRenderUnit {
     public KColor color;
     public KCoordinates coordinates;
 
+    public KRenderUnit(int unitID, KColor color, KCoordinates coordinates) {
+        this.unitID = unitID;
+        this.color = color;
+        this.coordinates = coordinates; //????
+    }
 }

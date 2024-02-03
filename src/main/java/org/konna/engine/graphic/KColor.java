@@ -14,7 +14,7 @@ public class KColor {
         this.red = rgba & 0x00FF0000;
         this.green = rgba & 0x0000FF00;
         this.blue = rgba & 0x000000FF;
-        this.alpha = rgba & 0xFF000000; //fix if incorrect colors
+        this.alpha = rgba & 0xFF000000; //fix if incorrect colors //TODO FIX COLOR CONVERSION FORMULAS
     }
 
     public void multiply(KColor other) {
