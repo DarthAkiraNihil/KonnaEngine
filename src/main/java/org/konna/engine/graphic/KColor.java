@@ -11,10 +11,10 @@ public class KColor {
     }
 
     public KColor(int rgba) {
-        this.red = rgba & 0x00FF0000;
-        this.green = rgba & 0x0000FF00;
+        this.red = rgba & 0x00FF0000 >> 16;
+        this.green = rgba & 0x0000FF00 >> 8;
         this.blue = rgba & 0x000000FF;
-        this.alpha = rgba & 0xFF000000; //fix if incorrect colors //TODO FIX COLOR CONVERSION FORMULAS
+        this.alpha = rgba & 0xFF000000 >> 24; //fix if incorrect colors //TODO FIX COLOR CONVERSION FORMULAS
     }
 
     public void multiply(KColor other) {
@@ -25,7 +25,7 @@ public class KColor {
     }
 
     public int getConvertedToInt() {
-        return (((alpha * 255) + red) * 255 + green) * 255 + blue; //fix if corrupted
+        return this.alpha << 24 | this.red << 16 | this.green << 8 | this.blue;
     }
 
 }

@@ -21,6 +21,9 @@ public class KSemiConsole extends Frame implements KEventListener, KeyListener, 
     private KBaseEventDispatcher eventDispatcher;
     private Canvas semiConsoleCanvas;
 
+    //TEST TEST TEST
+    private int o = 0;
+
     public KSemiConsole(String pathToRenderUnitTable) throws KGraphicException {
         super("TEST TEST TEST TEST TEST");
         this.semiConsoleRenderUnitList = new KRenderUnitList(pathToRenderUnitTable, new KSize(16,16));
@@ -33,7 +36,7 @@ public class KSemiConsole extends Frame implements KEventListener, KeyListener, 
                 g.setColor(new Color(0, 0, 0));
                 g.drawRect(0, 0, 200, 200);
                 g.fillRect(0, 0, 200, 200);
-                g.drawImage(semiConsoleRenderUnitList.getUnit(2, new KColor(0, 0, 200, 0)), 20, 20, 16, 16, this);
+                g.drawImage(semiConsoleRenderUnitList.getUnit(2, new KColor(255, 255, 0, 0)), 20, 20, 16, 16, this);
             }
         };
         this.semiConsoleCanvas.setSize(200, 200);
@@ -59,6 +62,8 @@ public class KSemiConsole extends Frame implements KEventListener, KeyListener, 
 
     @Override
     public void keyTyped(KeyEvent e) {
+        this.semiConsoleCanvas.getGraphics().drawImage(semiConsoleRenderUnitList.getUnit(o, new KColor(255, 255, 255, 0)), 20, 20, 16, 16, this);
+        o+=1;
         //this.dispatcher.invokeEvent("onKeyPressed", e.getKeyChar());
         //System.out.println(e.getKeyChar());
     }
