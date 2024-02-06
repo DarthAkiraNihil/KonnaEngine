@@ -34,7 +34,7 @@ public class KSemiConsole extends Frame implements KEventListener, KeyListener, 
             @Override
             public void paint(Graphics g) {
                 g.setColor(new Color(0, 0, 0));
-                g.drawRect(0, 0, 200, 200);
+                //g.drawRect(0, 0, 200, 200);
                 g.fillRect(0, 0, 200, 200);
                 g.drawImage(semiConsoleRenderUnitList.getUnit(2, new KColor(255, 255, 0, 0)), 20, 20, 16, 16, this);
             }

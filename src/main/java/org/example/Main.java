@@ -6,7 +6,7 @@ import org.konna.engine.graphic.semiconsole.KSemiConsole;
 public class Main {
     public static void main(String[] args) {
         try {
-            KSemiConsole ksc = new KSemiConsole("D:\\CodeShit\\Java\\KonnaEngine\\cp437_16x16.png");
+            KSemiConsole ksc = new KSemiConsole("cp437_16x16.png");
         }
         catch (KGraphicException k) {
             System.out.println("Fuck");

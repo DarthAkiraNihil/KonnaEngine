@@ -40,3 +40,5 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/src/main/java/org/example/cp437_16x16.png
+/cp437_16x16.png

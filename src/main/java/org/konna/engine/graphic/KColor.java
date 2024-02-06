@@ -1,5 +1,7 @@
 package org.konna.engine.graphic;
 
+import java.awt.*;
+
 public class KColor {
     public int red, green, blue, alpha;
 
@@ -14,7 +16,7 @@ public class KColor {
         this.red = rgba & 0x00FF0000 >> 16;
         this.green = rgba & 0x0000FF00 >> 8;
         this.blue = rgba & 0x000000FF;
-        this.alpha = rgba & 0xFF000000 >> 24; //fix if incorrect colors //TODO FIX COLOR CONVERSION FORMULAS
+        this.alpha = rgba & 0xFF000000 >> 24;
     }
 
     public void multiply(KColor other) {
@@ -26,6 +28,10 @@ public class KColor {
 
     public int getConvertedToInt() {
         return this.alpha << 24 | this.red << 16 | this.green << 8 | this.blue;
+    }
+
+    public Color getConvertedToAWTColor() {
+        return new Color(this.red, this.green, this.blue, this.alpha);
     }
 
 }
