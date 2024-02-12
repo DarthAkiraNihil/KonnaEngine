@@ -1,7 +1,8 @@
-package org.konna.engine.graphic;
+package org.konna.engine.graphic.render;
 
 import org.konna.engine.common.KSize;
 import org.konna.engine.common.except.KGraphicException;
+import org.konna.engine.graphic.KColor;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -9,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class KRenderUnitList {
+public class KRenderUnitList { //TO REMOVE
     private ArrayList<BufferedImage> renderUnitList;
 
     public KRenderUnitList(String pathToTable, KSize tableUnitSize) throws KGraphicException{

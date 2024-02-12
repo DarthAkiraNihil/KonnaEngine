@@ -1,7 +1,8 @@
-package org.konna.engine.graphic;
+package org.konna.engine.graphic.render;
 
 import org.konna.engine.common.KCoordinates2;
 import org.konna.engine.common.KSize;
+import org.konna.engine.graphic.KColor;
 
 public class KTileRenderAttributes {
     public final int id;

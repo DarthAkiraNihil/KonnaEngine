@@ -4,9 +4,9 @@ import org.konna.engine.common.KCoordinates;
 import org.konna.engine.common.KDirection;
 import org.konna.engine.common.KMovable;
 import org.konna.engine.graphic.KColor;
-import org.konna.engine.graphic.KRenderInfo;
-import org.konna.engine.graphic.KRenderUnit;
-import org.konna.engine.graphic.KRenderable;
+import org.konna.engine.graphic.render.KRenderInfo;
+import org.konna.engine.graphic.render.KRenderUnit;
+import org.konna.engine.graphic.render.KRenderable;
 
 public class KPlayer extends KPlayable implements KRenderable, KMovable {
     private KCoordinates globalCoordinates;

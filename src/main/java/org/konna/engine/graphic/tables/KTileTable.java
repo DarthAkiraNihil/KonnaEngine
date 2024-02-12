@@ -2,7 +2,7 @@ package org.konna.engine.graphic.tables;
 
 import org.konna.engine.common.except.KNotFoundException;
 import org.konna.engine.graphic.KColor;
-import org.konna.engine.graphic.KTileRenderAttributes;
+import org.konna.engine.graphic.render.KTileRenderAttributes;
 
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
@@ -20,7 +20,7 @@ public class KTileTable {
         tilesMap.put(tileAttributes.id, tileAttributes);
     }
 
-    public void addTiles(KTileRenderAttributes[] tiles) {
+    public void addTiles(KTileRenderAttributes[]  tiles) {
         for (KTileRenderAttributes tile : tiles) {
             this.addTile(tile);
         }

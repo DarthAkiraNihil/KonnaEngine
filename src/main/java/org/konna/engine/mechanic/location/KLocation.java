@@ -1,8 +1,8 @@
 package org.konna.engine.mechanic.location;
 
 import org.konna.engine.common.KCoordinates;
-import org.konna.engine.graphic.KRenderInfo;
-import org.konna.engine.graphic.KRenderable;
+import org.konna.engine.graphic.render.KRenderInfo;
+import org.konna.engine.graphic.render.KRenderable;
 
 public class KLocation implements KRenderable {
     public final int length, width, height;

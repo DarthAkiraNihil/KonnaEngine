@@ -1,4 +1,4 @@
-package org.konna.engine.graphic;
+package org.konna.engine.graphic.render;
 
 import java.util.ArrayList;
 

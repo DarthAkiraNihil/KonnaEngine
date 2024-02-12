@@ -5,16 +5,13 @@ import org.konna.engine.common.event.KBaseEventDispatcher;
 import org.konna.engine.common.event.KEventListener;
 import org.konna.engine.common.except.KGraphicException;
 import org.konna.engine.graphic.KColor;
-import org.konna.engine.graphic.KRenderUnitList;
+import org.konna.engine.graphic.render.KRenderUnitList;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowListener;
 import java.awt.event.WindowEvent;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 public class KSemiConsole extends Frame implements KEventListener, KeyListener, WindowListener {
     private KRenderUnitList semiConsoleRenderUnitList;
