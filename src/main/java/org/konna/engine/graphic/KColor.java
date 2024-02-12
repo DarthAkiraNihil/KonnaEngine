@@ -5,6 +5,8 @@ import java.awt.*;
 public class KColor {
     public int red, green, blue, alpha;
 
+    public static final KColor NoColor = new KColor(-1, -1, -1, -1);
+
     public KColor(int red, int green, int blue, int alpha) {
         this.red = red;
         this.green = green;

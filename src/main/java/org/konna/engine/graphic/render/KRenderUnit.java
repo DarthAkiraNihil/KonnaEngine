@@ -14,4 +14,10 @@ public class KRenderUnit {
         this.color = color;
         this.coordinates = coordinates; //????
     }
+
+    public KRenderUnit(int id, KColor color) {
+        this.id = id;
+        this.color = color;
+        this.coordinates = KCoordinates.InvalidPlace;
+    }
 }

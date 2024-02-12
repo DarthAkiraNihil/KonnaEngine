@@ -1,6 +1,11 @@
 package org.konna.engine.mechanic.location;
 
-public class KTile {
+import org.konna.engine.graphic.KColor;
+import org.konna.engine.graphic.render.KRenderInfo;
+import org.konna.engine.graphic.render.KRenderUnit;
+import org.konna.engine.graphic.render.KRenderable;
+
+public class KTile implements KRenderable {
 
     private final int id;
     private final String name;
@@ -27,5 +32,11 @@ public class KTile {
 
     public String getName() {
         return name;
+    }
+
+    public KRenderInfo getRenderInfo() {
+        KRenderInfo temp = new KRenderInfo();
+        temp.addUnit(new KRenderUnit(this.id, KColor.NoColor));
+        return temp;
     }
 }
