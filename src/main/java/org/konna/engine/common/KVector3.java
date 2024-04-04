@@ -2,15 +2,15 @@ package org.konna.engine.common;
 
 import java.util.Objects;
 
-public class KCoordinates {
+public class KVector3 {
     public int x, y, z;
 
-    public static final KCoordinates InvalidPlace = new KCoordinates(
+    public static final KVector3 InvalidPlace = new KVector3(
         Integer.MAX_VALUE,
         Integer.MAX_VALUE,
         Integer.MAX_VALUE
     );
-    public KCoordinates(int x, int y, int z) {
+    public KVector3(int x, int y, int z) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -20,7 +20,7 @@ public class KCoordinates {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        KCoordinates that = (KCoordinates) o;
+        KVector3 that = (KVector3) o;
         return x == that.x && y == that.y && z == that.z;
     }
 

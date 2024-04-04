@@ -4,12 +4,21 @@ import java.util.ArrayList;
 
 public class KRenderInfo {
     private ArrayList<KRenderUnit> renderUnits;
+    private KText text;
     public KRenderInfo() {
-        this.renderUnits = new ArrayList<>();
+        this.renderUnits = null;
+        this.text = null;
     }
 
     public void addUnit(KRenderUnit unit) {
+        if (this.renderUnits == null) {
+            this.renderUnits = new ArrayList<>();
+        }
         this.renderUnits.add(unit);
+    }
+
+    public void packText(KText text) {
+        this.text = text;
     }
 
     public void addUnits(KRenderInfo info) {
@@ -19,10 +28,18 @@ public class KRenderInfo {
     }
 
     public int getUnitCount() {
-        return this.renderUnits.size();
+        if (this.renderUnits == null) {
+            return 0;
+        } else {
+            return this.renderUnits.size();
+        }
     }
 
     public KRenderUnit getUnit(int index) {
         return this.renderUnits.get(index);
+    }
+
+    public KText getText() {
+        return text;
     }
 }

@@ -1,6 +1,6 @@
 package org.konna.engine.mechanic.location;
 
-import org.konna.engine.common.KCoordinates;
+import org.konna.engine.common.KVector3;
 import org.konna.engine.graphic.render.KRenderInfo;
 import org.konna.engine.graphic.render.KRenderable;
 
@@ -15,7 +15,7 @@ public class KLocation implements KRenderable {
         this.tiles = new KTile[height][width][length];
     }
 
-    public void setTile(KCoordinates at, KTile tile) {
+    public void setTile(KVector3 at, KTile tile) {
         this.tiles[at.z][at.y][at.x] = tile;
     }
 

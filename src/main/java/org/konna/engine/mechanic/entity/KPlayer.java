@@ -1,6 +1,6 @@
 package org.konna.engine.mechanic.entity;
 
-import org.konna.engine.common.KCoordinates;
+import org.konna.engine.common.KVector3;
 import org.konna.engine.common.KDirection;
 import org.konna.engine.common.KMovable;
 import org.konna.engine.graphic.KColor;
@@ -9,15 +9,15 @@ import org.konna.engine.graphic.render.KRenderUnit;
 import org.konna.engine.graphic.render.KRenderable;
 
 public class KPlayer extends KPlayable implements KRenderable, KMovable {
-    private KCoordinates globalCoordinates;
+    private KVector3 globalCoordinates;
 
-    public KPlayer(KCoordinates globalCoordinates) {
+    public KPlayer(KVector3 globalCoordinates) {
         this.globalCoordinates = globalCoordinates;
     }
 
     public KRenderInfo getRenderInfo() {
         KRenderInfo info = new KRenderInfo();
-        info.addUnit(new KRenderUnit(1, new KColor(255, 0, 0, 0), globalCoordinates));
+        info.addUnit(new KRenderUnit(1, new KColor(255, 0, 0, 0), null));
         return info;
     }
 
