@@ -10,7 +10,7 @@ import org.konna.engine.graphic.tables.KTileTable;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
-public class KUnitRenderer extends KBaseRenderer {
+public class KUnitRenderer implements KBaseRenderer {
 
     protected KTileTable tileTable;
     protected KSpriteTable spriteTable;
@@ -22,7 +22,6 @@ public class KUnitRenderer extends KBaseRenderer {
         this.tileFont = tileFont;
     }
 
-    @Override
     protected BufferedImage renderOne(KRenderUnit unit) throws KNotFoundException {
         return switch (unit.type) {
             case Tile -> this.tileTable.getRendered(unit);

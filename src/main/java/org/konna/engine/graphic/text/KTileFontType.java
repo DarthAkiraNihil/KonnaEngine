@@ -1,6 +1,6 @@
 package org.konna.engine.graphic.text;
 
-public enum KFontType {
+public enum KTileFontType {
     ASCII,
     Unicode,
     TTF,

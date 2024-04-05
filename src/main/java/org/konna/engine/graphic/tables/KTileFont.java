@@ -3,20 +3,20 @@ package org.konna.engine.graphic.tables;
 import org.konna.engine.common.KSize;
 import org.konna.engine.common.except.KNotFoundException;
 import org.konna.engine.graphic.KColor;
-import org.konna.engine.graphic.text.KFontType;
+import org.konna.engine.graphic.text.KTileFontType;
 import org.konna.engine.graphic.render.KRenderUnit;
 
 import java.awt.image.BufferedImage;
 
 public class KTileFont extends KBaseTable{
     protected final BufferedImage fontFace;
-    protected final KFontType fontType;
+    protected final KTileFontType fontType;
     protected final KSize fontSize;
     protected final String fontName;
 
     public KTileFont(
         BufferedImage fontFace,
-        KFontType fontType,
+        KTileFontType fontType,
         KSize fontSize,
         String fontName
     ) {
