@@ -1,5 +1,7 @@
 package org.konna.engine.graphic.render;
 
+import org.konna.engine.graphic.text.KText;
+
 import java.util.ArrayList;
 
 public class KRenderInfo {

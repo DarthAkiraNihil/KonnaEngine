@@ -3,7 +3,7 @@ package org.konna.engine.graphic.tables;
 import org.konna.engine.common.KSize;
 import org.konna.engine.common.except.KNotFoundException;
 import org.konna.engine.graphic.KColor;
-import org.konna.engine.graphic.KFontType;
+import org.konna.engine.graphic.text.KFontType;
 import org.konna.engine.graphic.render.KRenderUnit;
 
 import java.awt.image.BufferedImage;
