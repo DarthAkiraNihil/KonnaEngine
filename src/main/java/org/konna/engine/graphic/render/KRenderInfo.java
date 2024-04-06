@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class KRenderInfo {
     private ArrayList<KRenderUnit> renderUnits;
-    private KText text;
+    //private KText text;
     public KRenderInfo() {
         this.renderUnits = null;
-        this.text = null;
+        //this.text = null;
     }
 
     public void addUnit(KRenderUnit unit) {
@@ -19,9 +19,9 @@ public class KRenderInfo {
         this.renderUnits.add(unit);
     }
 
-    public void packText(KText text) {
-        this.text = text;
-    }
+    //public void packText(KText text) {
+    //    this.text = text;
+    //}
 
     public void addUnits(KRenderInfo info) {
         for (int i = 0; i < info.getUnitCount(); i++) {
@@ -41,7 +41,7 @@ public class KRenderInfo {
         return this.renderUnits.get(index);
     }
 
-    public KText getText() {
-        return text;
-    }
+    //public KText getText() {
+    //    return text;
+    //}
 }

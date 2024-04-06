@@ -4,5 +4,6 @@ public enum KRenderUnitType {
     Tile,
     Symbol,
     Sprite,
-    Image
+    Image,
+    Text
 }

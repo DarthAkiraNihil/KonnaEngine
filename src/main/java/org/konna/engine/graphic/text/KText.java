@@ -7,9 +7,9 @@ public class KText {
     protected final String content;
     protected final String font;
     protected final KSize size;
-    protected final KTextType type;
+    protected final KFontType type;
 
-    public KText(String content, String font, KSize size, KTextType type) {
+    public KText(String content, String font, KSize size, KFontType type) {
         this.content = content;
         this.font = font;
         this.size = size;
@@ -28,7 +28,7 @@ public class KText {
         return this.size;
     }
 
-    public KTextType getType() {
+    public KFontType getType() {
         return this.type;
     }
 }

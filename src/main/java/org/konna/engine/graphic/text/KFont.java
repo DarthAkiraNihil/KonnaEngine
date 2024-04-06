@@ -6,9 +6,9 @@ import java.util.ArrayList;
 public abstract class KFont {
 
     protected final String name;
-    protected final KTileFontType type;
+    protected final KFontType type;
 
-    public KFont(String name, KTileFontType type) {
+    public KFont(String name, KFontType type) {
         this.name = name;
         this.type = type;
     }
@@ -17,7 +17,7 @@ public abstract class KFont {
         return name;
     }
 
-    public KTileFontType getType() {
+    public KFontType getType() {
         return type;
     }
 

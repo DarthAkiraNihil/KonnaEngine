@@ -1,6 +1,6 @@
 package org.konna.engine.graphic.text;
 
-public enum KTextType {
+public enum KFontType {
     Tiled,
     TTF
 }
