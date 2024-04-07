@@ -32,7 +32,7 @@ public class KUnitRenderer implements KBaseRenderer {
     }
 
     @Override
-    public ArrayList<BufferedImage> render(KRenderInfo info) {
+    public ArrayList<BufferedImage> render(KRenderInfo unit) {
         //KRenderInfo info = renderable.getRenderInfo();
         ArrayList<BufferedImage> rendered = new ArrayList<>();
         for (int i = 0; i < info.getUnitCount(); i++) {

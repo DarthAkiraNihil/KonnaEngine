@@ -23,9 +23,8 @@ public class KRenderUnit {
         this.coordinates = KVector2.InvalidPlace;
     }
 
-    public KRenderUnit(KText text, KColor color, KVector2 coordinates) {
+    public KRenderUnit(KText text, KVector2 coordinates) {
         this.id = 0;
-        this.color = color;
         this.text = text;
         this.coordinates = coordinates;
     }
