@@ -27,7 +27,7 @@ public class KTextRenderer implements KBaseRenderer{
     }
 
     @Override
-    public ArrayList<BufferedImage> render(KRenderUnit unit){
+    public BufferedImage render(KRenderUnit unit){
         KText text = unit.text;
 
         if (text == null) {

@@ -21,5 +21,5 @@ public abstract class KFont {
         return type;
     }
 
-    public abstract ArrayList<BufferedImage> render(KText text);
+    public abstract BufferedImage render(KText text);
 }

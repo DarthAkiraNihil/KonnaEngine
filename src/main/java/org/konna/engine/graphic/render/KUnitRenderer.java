@@ -2,47 +2,37 @@ package org.konna.engine.graphic.render;
 
 import org.konna.engine.common.except.KNotFoundException;
 import org.konna.engine.common.except.KRenderError;
-import org.konna.engine.graphic.tables.KBaseTable;
-import org.konna.engine.graphic.tables.KSpriteTable;
-import org.konna.engine.graphic.tables.KTileFont;
-import org.konna.engine.graphic.tables.KTileTable;
+import org.konna.engine.graphic.tables.*;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class KUnitRenderer implements KBaseRenderer {
 
-    protected KTileTable tileTable;
-    protected KSpriteTable spriteTable;
-    protected KTileFont tileFont;
+    private final KTileTable tileTable;
+    private final KSpriteTable spriteTable;
+    private final KImageTable imageTable;
 
-    public KUnitRenderer(KTileTable tileTable, KSpriteTable spriteTable, KTileFont tileFont) {
+    public KUnitRenderer(KTileTable tileTable, KSpriteTable spriteTable, KImageTable imageTable) {
         this.tileTable = tileTable;
         this.spriteTable = spriteTable;
-        this.tileFont = tileFont;
-    }
-
-    protected BufferedImage renderOne(KRenderUnit unit) throws KNotFoundException {
-        return switch (unit.type) {
-            case Tile -> this.tileTable.getRendered(unit);
-            case Sprite -> null;
-            case Symbol -> null;
-            case Image -> null;
-        };
+        this.imageTable = imageTable;
     }
 
     @Override
-    public ArrayList<BufferedImage> render(KRenderInfo unit) {
-        //KRenderInfo info = renderable.getRenderInfo();
-        ArrayList<BufferedImage> rendered = new ArrayList<>();
-        for (int i = 0; i < info.getUnitCount(); i++) {
-            try {
-                rendered.add(this.renderOne(info.getUnit(i)));
-            } catch (Exception e) {
-                throw new KRenderError(e);
-            }
+    public BufferedImage render(KRenderUnit unit) throws KRenderError{
+        try {
+            return switch (unit.type) {
+                case Tile -> this.tileTable.getRendered(unit);
+                case Sprite -> this.spriteTable.getRendered(unit);
+                case Image -> this.imageTable.getRendered(unit);
+                default -> null;
+            };
+        } catch (Exception e) {
+            throw new KRenderError(e);
         }
-        return rendered;
+
+
     }
 
     // Render machine = text re + unit re

@@ -16,11 +16,14 @@ public class KRenderMachine {
     public ArrayList<BufferedImage> render(KRenderInfo info) {
         ArrayList<BufferedImage> rendered = new ArrayList<>();
 
-        if (info.getUnitCount() != 0) {
-            rendered.addAll(this.unitRenderer.render(info));
-        }
-        if (info.getText() != null) {
-            rendered.addAll(this.textRenderer.render(info));
+        //todo if text and graphic are in one unit
+
+        for (int i = 0; i < info.getUnitCount(); i++) {
+            KRenderUnit unit = info.getUnit(i);
+            rendered.add(this.unitRenderer.render(unit));
+            if (unit.text != null) {
+                rendered.add(this.textRenderer.render(unit));
+            }
         }
 
         return rendered;

@@ -32,7 +32,7 @@ public class KTileFont extends KBaseTable{
 
     @Override
     public BufferedImage getRendered(KRenderUnit unit) throws KNotFoundException {
-        //TODO INCORRECT GETTING
+        //TODO Font renders the whole text
         BufferedImage rendered = this.fontFace.getSubimage(
             unit.coordinates.x * this.fontSize.w,
             unit.coordinates.y * this.fontSize.h,

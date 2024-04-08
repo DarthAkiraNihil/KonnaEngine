@@ -8,6 +8,6 @@ import java.util.ArrayList;
 public interface KBaseRenderer {
 
     //protected abstract BufferedImage renderOne(KRenderUnit unit) throws KNotFoundException;
-    ArrayList<BufferedImage> render(KRenderUnit unit);
+    BufferedImage render(KRenderUnit unit);
 
 }
