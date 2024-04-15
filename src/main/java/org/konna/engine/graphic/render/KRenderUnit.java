@@ -15,17 +15,20 @@ public class KRenderUnit {
         this.id = id;
         this.color = color;
         this.coordinates = coordinates; //????
+        this.type = KRenderUnitType.Tile;
     }
 
     public KRenderUnit(int id, KColor color) {
         this.id = id;
         this.color = color;
         this.coordinates = KVector2.InvalidPlace;
+        this.type = KRenderUnitType.Tile;
     }
 
     public KRenderUnit(KText text, KVector2 coordinates) {
         this.id = 0;
         this.text = text;
         this.coordinates = coordinates;
+        this.type = KRenderUnitType.Text;
     }
 }

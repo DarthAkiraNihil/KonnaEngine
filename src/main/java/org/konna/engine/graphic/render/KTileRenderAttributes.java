@@ -8,7 +8,7 @@ public class KTileRenderAttributes {
     public final int id;
     public final boolean requireColoring;
     public final KColor tileColor;
-    public final int sheetId;
+    //public final int sheetId;
     public final KVector2 tileTopLeftCorner;
     public final KSize tileSize;
 
@@ -16,7 +16,7 @@ public class KTileRenderAttributes {
         this.id = id;
         this.requireColoring = requireColoring;
         this.tileColor = tileColor;
-        this.sheetId = sheetId;
+        //this.sheetId = sheetId;
         this.tileTopLeftCorner = tileTopLeftCorner;
         this.tileSize = tileSize;
     }

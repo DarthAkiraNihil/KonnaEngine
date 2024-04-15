@@ -1,6 +1,7 @@
 package org.konna.engine.graphic.text;
 
 import org.konna.engine.common.except.KNotFoundException;
+import org.konna.engine.common.except.KNotImplementedException;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -28,9 +29,9 @@ public class KTrueTypeFont extends KFont{
 
     //TODO add color and something to ktext
     @Override
-    public ArrayList<BufferedImage> render(KText text) {
+    public BufferedImage render(KText text) {
 
-        ArrayList<BufferedImage> renderResult = new ArrayList<>();
+       throw new KNotImplementedException("No text?");
 
         /*
         TODO
@@ -47,6 +48,6 @@ public class KTrueTypeFont extends KFont{
 
          */
 
-        return renderResult;
+
     }
 }
