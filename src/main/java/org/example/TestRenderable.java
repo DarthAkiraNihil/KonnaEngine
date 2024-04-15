@@ -39,7 +39,7 @@ public class TestRenderable implements KRenderable {
         renderInfo.addUnit(new KRenderUnit(
             5,
             KColor.White,
-            new KVector2(4, 2)
+            new KVector2(1, 2)
         ));
         return renderInfo;
     }
