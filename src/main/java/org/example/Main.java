@@ -36,6 +36,15 @@ public class Main {
                 new KSize(16, 16)
             ));
 
+            kts.addTile(new KTileRenderAttributes(
+                5,
+                true,
+                new KColor(0, 255, 255, 255),
+                0,
+                new KVector2(32,16),
+                new KSize(16, 16)
+            ));
+
             ktt.addTileSheet(kts);
 
             KUnitRenderer ur = new KUnitRenderer(

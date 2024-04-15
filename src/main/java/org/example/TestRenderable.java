@@ -16,6 +16,31 @@ public class TestRenderable implements KRenderable {
             KColor.White,
             new KVector2(2, 2)
         ));
+        renderInfo.addUnit(new KRenderUnit(
+            4,
+            KColor.White,
+            new KVector2(2, 3)
+        ));
+        renderInfo.addUnit(new KRenderUnit(
+            4,
+            KColor.White,
+            new KVector2(2, 4)
+        ));
+        renderInfo.addUnit(new KRenderUnit(
+            4,
+            KColor.White,
+            new KVector2(2, 5)
+        ));
+        renderInfo.addUnit(new KRenderUnit(
+            5,
+            KColor.White,
+            new KVector2(3, 2)
+        ));
+        renderInfo.addUnit(new KRenderUnit(
+            5,
+            KColor.White,
+            new KVector2(4, 2)
+        ));
         return renderInfo;
     }
 }

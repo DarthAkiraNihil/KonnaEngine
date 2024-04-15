@@ -75,8 +75,9 @@ public class KSemiConsoleCanvas extends Canvas {
                 insertPlace,
                 g
             );
-            g.dispose();
+
             System.out.println("I've drawn an image");
         }
+        g.dispose();
     }
 }
