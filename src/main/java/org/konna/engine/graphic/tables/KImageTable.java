@@ -38,7 +38,7 @@ public class KImageTable extends KBaseTable{
                     for (int i = 0; i < loadedImage.getHeight(); i++) {
                         for (int j = 0; j < loadedImage.getWidth(); j++) {
                             KColor newPixColor = new KColor(loadedImage.getRGB(j, i));
-                            newPixColor.multiply(unit.color); //TODO do nothinng if white
+                            newPixColor.multiply(unit.color);
                             loadedImage.setRGB(
                                 j,
                                 i,

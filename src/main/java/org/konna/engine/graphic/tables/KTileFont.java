@@ -43,7 +43,7 @@ public class KTileFont extends KBaseTable{
         for (int i = 0; i < this.fontSize.h; i++) {
             for (int j = 0; j < this.fontSize.w; j++) {
                 KColor newPixColor = new KColor(rendered.getRGB(j, i));
-                newPixColor.multiply(unit.color); //TODO do nothinng if white
+                newPixColor.multiply(unit.color);
                 rendered.setRGB(
                     j,
                     i,

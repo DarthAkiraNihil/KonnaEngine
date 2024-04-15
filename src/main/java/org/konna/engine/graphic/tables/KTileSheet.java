@@ -45,8 +45,6 @@ public class KTileSheet extends KBaseTable{
         } else {
             KTileRenderAttributes tileAttributes = this.tilesMap.get(unit.id);
 
-            //todo clone of buffered image cuz it goes deep dark and changes the sheet
-
             WritableRaster data = (
                 (WritableRaster) this.tileSheet.getData(
                     new Rectangle(
@@ -58,20 +56,7 @@ public class KTileSheet extends KBaseTable{
             )
                 .createWritableTranslatedChild(0, 0);
 
-// Create new image with data
             BufferedImage rendered = new BufferedImage(this.tileSheet.getColorModel(), data, this.tileSheet.isAlphaPremultiplied(), null);
-
-//            BufferedImage ref = this.tileSheet.getSubimage(
-//                tileAttributes.tileTopLeftCorner.x,
-//                tileAttributes.tileTopLeftCorner.y,
-//                tileAttributes.tileSize.w,
-//                tileAttributes.tileSize.h
-//            );
-//
-//            ColorModel cm = ref.getColorModel();
-//            boolean isAlphaPremultiplied = cm.isAlphaPremultiplied();
-//            WritableRaster raster = ref.copyData(null);
-//            BufferedImage rendered = new BufferedImage(cm, raster, isAlphaPremultiplied, null);
 
             if (tileAttributes.requireColoring) {
                 for (int i = 0; i < tileAttributes.tileSize.h; i++) {
